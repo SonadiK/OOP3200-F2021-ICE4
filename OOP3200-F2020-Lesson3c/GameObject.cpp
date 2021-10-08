@@ -34,6 +34,7 @@ GameObject& GameObject::operator=(const GameObject& other_object)
 	return (*this);
 }
 
+//Defining Accessors.
 Vector2D GameObject::GetPosition() const
 {
 	return m_position;
@@ -44,6 +45,7 @@ int GameObject::GetID() const
 	return m_id;
 }
 
+//Defining Mutator.
 void GameObject::SetID(const int id)
 {
 	m_id = id;
@@ -54,6 +56,8 @@ void GameObject::SetPosition(const float x, const float y)
 	m_position.Set(x, y);
 }
 
+//Utility function definition
+//set the position by passing in the reference to the vector
 void GameObject::SetPosition(const Vector2D& new_position)
 {
 	m_position = new_position;

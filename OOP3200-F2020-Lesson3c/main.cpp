@@ -1,3 +1,16 @@
+/*
+ * Project OOP3200 - F2021_ICE4
+* @author Sonadi Kannangara
+* @studentID  100778336
+* @version 1.0
+* @date    05 October 2021
+* Last modified date : 08 October 2021
+* Activity    ICE 4 - In Class Exercise 4
+ *
+ */
+
+ // OOP3200-F2021-ICE4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
 #include <iomanip>
 #include <iostream>
 #include <vector>
@@ -20,7 +33,8 @@ static void BuildGameObjects(std::vector<GameObject*>& game_objects, const int n
 		std::cout << "You entered  " << id << " for the gameObject's ID " << std::endl;
 		std::cout << "You Entered " << point << " for the gameObject's position" << std::endl;
 		std::cout << "--------------------------------------------------------------\n" << std::endl;
-		auto* gameObject = new GameObject(id, point); //auto find the type by itself.
+		//auto find the type by itself.
+		auto* gameObject = new GameObject(id, point); //use new as a pointer to add memory to the heap
 		game_objects.push_back(gameObject);
 	}
 }
@@ -46,7 +60,7 @@ static void CompareGameObjects(GameObject* object1, GameObject* object2)
 
 int main()
 {
-	std::vector<GameObject*> gameObjects;
+	std::vector<GameObject*> gameObjects; 
 
 	int num_of_GO;
 	std::cout << "How many gameObjects do you need?: ";

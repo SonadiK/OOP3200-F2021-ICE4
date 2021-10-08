@@ -23,10 +23,12 @@ public:
 	//Accessor
 	Vector2D GetPosition() const;
 	int GetID() const;
+
 	//Mutator
 	void SetPosition(float x, float y);
 	void SetPosition(const Vector2D& new_position); //set the position by passing in the reference to the vector
 	void SetID(int id);
+
 	//utility functions
 	std::string ToString() const;
 
